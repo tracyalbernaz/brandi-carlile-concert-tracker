@@ -1,0 +1,16 @@
+<h2> Brandi Carlile Concert Tracker </h2>
+
+
+
+<ul>
+  <% @concerts.each do |concert| %>
+    <li><%= link_to "#{concert.artist_name}", concert_path(concert.id) %></li>
+      <ul>
+        <%="#{concert.venue_name} - "%>
+        <%="#{concert.city},"%>
+        <%="#{concert.state}"%>
+        <br>
+        <%="#{concert.date.strftime("%m/%d/%y")}"%>
+      </ul>
+  <% end %>  
+</ul>
