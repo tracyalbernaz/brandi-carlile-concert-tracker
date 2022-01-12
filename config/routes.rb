@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   resources :concerts, only: [:index, :show] do
     # resources :reviews, only: [:new, :create]
-    # resources :categories, only: [:show]
   end
 
 end
