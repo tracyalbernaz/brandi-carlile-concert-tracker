@@ -1,0 +1,14 @@
+<h1> <%= @concert.artist_name %> </h1>
+<h3> <%= "Co-Headliner: #{@concert.coheadliner_name}" %> </h3>
+<h3> <%= "Opener: #{@concert.opener_name_1}" %> </h3>
+<h3> <%= "Opener: #{@concert.opener_name_2}" %> </h3>
+
+<p> <%= @concert.festival_name%> </p>
+<p> <%= "#{@concert.venue_name} - "%> 
+<%= "#{@concert.city}, "%> 
+<%= @concert.state %></p>
+
+<p> <%= @concert.date.strftime("%m/%d/%y") %> </p>
+
+<%= link_to "Back", concerts_path %>
+
