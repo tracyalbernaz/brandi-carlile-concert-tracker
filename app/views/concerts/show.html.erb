@@ -9,7 +9,10 @@
     "Opener: #{@concert.opener_name_2}" 
     end %> </h3>
 
-<p> <%= @concert.festival_name%> </p>
+<p> <%= if @concert.festival_name
+    "Festival: #{@concert.festival_name}" 
+    end %> </p>
+
 <p> <%= "#{@concert.venue_name} - "%> 
 <%= "#{@concert.city}, "%> 
 <%= @concert.state %></p>
