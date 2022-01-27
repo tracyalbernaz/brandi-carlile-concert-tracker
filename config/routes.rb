@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "concerts#index"
   get "/concerts", to: "concerts#index"
 
-  resources :concerts, only: [:index, :show] do
+  resources :concerts, only: [:index, :show, :new, :create] do
     # resources :reviews, only: [:new, :create]
   end
 

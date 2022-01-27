@@ -1,0 +1,53 @@
+<h2>New Concert Form</h2>
+
+<%= form_for(@concert) do |f| %>
+  <div class="field">
+    <%= f.label :artist_name, "Artist Name:" %><br />
+    <%= f.text_field :artist_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :coheadliner_name, "Co-Headliner: (optional)" %><br />
+    <%= f.text_field :coheadliner_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :opener_name_1, "Opener Name: (optional)" %><br />
+    <%= f.text_field :opener_name_1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :opener_name_2, "Opener Name: (optional)" %><br />
+    <%= f.text_field :opener_name_2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :festival_name, "Festival Name: (optional)" %><br />
+    <%= f.text_field :festival_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :venue_name, "Venue Name:" %><br />
+    <%= f.text_field :venue_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city, "City:" %><br />
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state, "State:" %><br />
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date, "Date: (yyyy-mm-dd)" %><br />
+    <%= f.text_field :date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Concert" %>
+  </div>
+<% end %>
+
