@@ -1,6 +1,18 @@
 class ConcertsController < ApplicationController
 
   def index
+
+
+    unparsed_seatgeek_data = Faraday.get( EVENT_URL)
+    
+    parsed_seatgeek_data = JSON.parse(unparsed_seatgeek_data.body)
+    organized_concert_info = []
+    parsed_seatgeek_data["events"].each do |event|
+      organized_concert_info << { venue: event["venue"]["name_v2"] }
+    end
+    # parsed_seatgeek_data["events"][0]["venue"]["name_v2"]
+    # binding.pry
+    @geek_concert_data = organized_concert_info
     @concerts = Concert.all
   end
 
